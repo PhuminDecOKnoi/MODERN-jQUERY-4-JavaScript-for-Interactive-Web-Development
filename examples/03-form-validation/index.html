@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Example 03 — Form Validation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <p class="eyebrow">Modern jQuery 4 Course</p>
+      <h1>Employee Profile Form</h1>
+      <p class="lead">
+        ตัวอย่างนี้ใช้ jQuery เพื่ออ่านค่าฟอร์ม ตรวจสอบข้อมูล และแสดงผลลัพธ์แบบ Interactive
+      </p>
+
+      <form id="employeeForm" novalidate>
+        <div class="form-group">
+          <label for="fullName">ชื่อ-นามสกุล</label>
+          <input id="fullName" name="fullName" type="text" placeholder="เช่น ภูมินทร์ ดีโคกน้อย" />
+          <small id="fullNameError" class="error-message"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="email">อีเมล</label>
+          <input id="email" name="email" type="email" placeholder="name@example.com" />
+          <small id="emailError" class="error-message"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="department">หน่วยงาน</label>
+          <select id="department" name="department">
+            <option value="">-- เลือกหน่วยงาน --</option>
+            <option value="HR">Human Resources</option>
+            <option value="Audit">Audit</option>
+            <option value="Compliance">Compliance</option>
+            <option value="IT">Information Technology</option>
+          </select>
+          <small id="departmentError" class="error-message"></small>
+        </div>
+
+        <label class="checkbox-row">
+          <input id="consent" name="consent" type="checkbox" />
+          <span>ยืนยันว่าข้อมูลถูกต้องและอนุญาตให้ประมวลผลเพื่อการฝึกอบรม</span>
+        </label>
+        <small id="consentError" class="error-message block"></small>
+
+        <div class="actions">
+          <button type="submit">ตรวจสอบและแสดงตัวอย่าง</button>
+          <button type="reset" class="secondary">ล้างข้อมูล</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card preview-card" id="previewCard" hidden>
+      <h2>Preview</h2>
+      <p><strong>ชื่อ:</strong> <span id="previewName"></span></p>
+      <p><strong>อีเมล:</strong> <span id="previewEmail"></span></p>
+      <p><strong>หน่วยงาน:</strong> <span id="previewDepartment"></span></p>
+    </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
