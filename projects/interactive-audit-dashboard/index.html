@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Audit / HR Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <p class="eyebrow">Capstone Project</p>
+    <h1>Interactive Audit / HR Dashboard</h1>
+    <p class="subtitle">
+      Modern jQuery 4 + JavaScript dashboard for HR, labour audit, and compliance learning.
+    </p>
+  </header>
+
+  <main class="app-shell">
+    <section class="toolbar" aria-label="Dashboard filters">
+      <label>
+        Search
+        <input id="searchInput" type="search" placeholder="Search finding, area, owner..." />
+      </label>
+
+      <label>
+        Status
+        <select id="statusFilter">
+          <option value="all">All</option>
+          <option value="Open">Open</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Closed">Closed</option>
+        </select>
+      </label>
+
+      <label>
+        Risk
+        <select id="riskFilter">
+          <option value="all">All</option>
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+        </select>
+      </label>
+
+      <button id="resetButton" type="button">Reset</button>
+    </section>
+
+    <section class="kpi-grid" aria-label="Dashboard KPIs">
+      <article class="kpi-card">
+        <span>Total</span>
+        <strong id="totalCount">0</strong>
+      </article>
+      <article class="kpi-card">
+        <span>Open</span>
+        <strong id="openCount">0</strong>
+      </article>
+      <article class="kpi-card">
+        <span>In Progress</span>
+        <strong id="progressCount">0</strong>
+      </article>
+      <article class="kpi-card">
+        <span>Closed</span>
+        <strong id="closedCount">0</strong>
+      </article>
+      <article class="kpi-card high-risk">
+        <span>High Risk</span>
+        <strong id="highRiskCount">0</strong>
+      </article>
+    </section>
+
+    <section class="content-grid">
+      <section class="panel table-panel">
+        <div class="panel-header">
+          <h2>Audit Findings</h2>
+          <p id="resultSummary">Loading data...</p>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Area</th>
+                <th>Requirement</th>
+                <th>Risk</th>
+                <th>Status</th>
+                <th>Owner</th>
+                <th>Due Date</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="findingTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <aside class="panel detail-panel" aria-live="polite">
+        <h2>Finding Details</h2>
+        <p class="muted">Select a finding to view root cause, corrective action, and evidence.</p>
+        <div id="detailBox" class="detail-box empty-state">
+          No finding selected.
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
