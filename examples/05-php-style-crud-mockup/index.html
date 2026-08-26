@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="th">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Example 05 — PHP Style CRUD Mockup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app-shell">
+        <section class="hero">
+            <p class="eyebrow">Modern jQuery 4 Course</p>
+            <h1>PHP-Style Employee CRUD Mockup</h1>
+            <p>
+                ตัวอย่างนี้จำลองแนวคิด CRUD ที่มักใช้ร่วมกับ PHP/MySQL โดยใช้ข้อมูลใน JavaScript แทนฐานข้อมูลจริง
+                เพื่อให้ผู้เรียนเข้าใจ flow ก่อนเชื่อมต่อ API จริง
+            </p>
+        </section>
+
+        <section class="kpi-grid" aria-label="Employee KPIs">
+            <article class="kpi-card">
+                <span>Total</span>
+                <strong id="totalEmployees">0</strong>
+            </article>
+            <article class="kpi-card">
+                <span>Active</span>
+                <strong id="activeEmployees">0</strong>
+            </article>
+            <article class="kpi-card">
+                <span>Departments</span>
+                <strong id="departmentCount">0</strong>
+            </article>
+        </section>
+
+        <section class="panel">
+            <h2>Add Employee</h2>
+            <form id="employeeForm" class="form-grid">
+                <label>
+                    Employee ID
+                    <input id="employeeId" name="employeeId" type="text" placeholder="EMP-001" required>
+                </label>
+                <label>
+                    Full Name
+                    <input id="fullName" name="fullName" type="text" placeholder="Phumin Decoknoi" required>
+                </label>
+                <label>
+                    Department
+                    <select id="department" name="department" required>
+                        <option value="">Select department</option>
+                        <option value="HR">HR</option>
+                        <option value="Audit">Audit</option>
+                        <option value="Compliance">Compliance</option>
+                        <option value="IT">IT</option>
+                    </select>
+                </label>
+                <label>
+                    Status
+                    <select id="status" name="status" required>
+                        <option value="Active">Active</option>
+                        <option value="Inactive">Inactive</option>
+                    </select>
+                </label>
+                <button type="submit">Add Record</button>
+            </form>
+            <p id="formMessage" class="message" role="status"></p>
+        </section>
+
+        <section class="panel">
+            <div class="toolbar">
+                <h2>Employee Records</h2>
+                <label>
+                    Filter
+                    <select id="departmentFilter">
+                        <option value="All">All Departments</option>
+                        <option value="HR">HR</option>
+                        <option value="Audit">Audit</option>
+                        <option value="Compliance">Compliance</option>
+                        <option value="IT">IT</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Department</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="employeeTable"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
