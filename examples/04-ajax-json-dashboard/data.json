@@ -1,0 +1,53 @@
+{
+  "success": true,
+  "message": "Dashboard data loaded successfully.",
+  "meta": {
+    "source": "mock-api",
+    "course": "MODERN jQUERY 4 & JavaScript for Interactive Web Development",
+    "records": 6
+  },
+  "data": [
+    {
+      "id": "F-001",
+      "title": "Training evidence is incomplete",
+      "severity": "high",
+      "status": "open",
+      "owner": "HR"
+    },
+    {
+      "id": "F-002",
+      "title": "Policy review record requires update",
+      "severity": "medium",
+      "status": "open",
+      "owner": "Compliance"
+    },
+    {
+      "id": "F-003",
+      "title": "Corrective action was verified",
+      "severity": "low",
+      "status": "closed",
+      "owner": "Audit"
+    },
+    {
+      "id": "F-004",
+      "title": "Employee communication log is missing",
+      "severity": "medium",
+      "status": "open",
+      "owner": "Operations"
+    },
+    {
+      "id": "F-005",
+      "title": "High-risk supplier assessment is overdue",
+      "severity": "high",
+      "status": "open",
+      "owner": "Procurement"
+    },
+    {
+      "id": "F-006",
+      "title": "Document control index is current",
+      "severity": "low",
+      "status": "closed",
+      "owner": "Document Control"
+    }
+  ]
+}
