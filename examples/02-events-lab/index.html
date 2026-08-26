@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 02 — jQuery Events Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page">
+        <section class="hero">
+            <p class="eyebrow">Modern jQuery 4 Course</p>
+            <h1>Events Lab: Interactive Course Cards</h1>
+            <p>
+                ตัวอย่างนี้สาธิตการใช้ jQuery events, DOM traversal, class manipulation และ Thai inline comments
+                สำหรับผู้เรียนที่ต้องการเข้าใจการสร้าง UI แบบโต้ตอบได้จริง
+            </p>
+            <button id="themeToggle" class="button" type="button">Switch to Dark Mode</button>
+        </section>
+
+        <section class="cards" aria-label="Course modules">
+            <article class="course-card">
+                <div class="course-card__header">
+                    <h2>Lesson 06</h2>
+                    <span>DOM Traversal</span>
+                </div>
+                <p class="course-card__content">
+                    ฝึกใช้ .closest(), .find(), .children(), .siblings() เพื่อจัดการ element เฉพาะส่วน
+                </p>
+                <button class="button button--secondary toggle-card" type="button">Toggle Details</button>
+            </article>
+
+            <article class="course-card">
+                <div class="course-card__header">
+                    <h2>Lesson 07</h2>
+                    <span>Text / HTML / Attributes</span>
+                </div>
+                <p class="course-card__content">
+                    ฝึกใช้ .text(), .html(), .val(), .attr(), .prop() และเข้าใจ security note ของ user input
+                </p>
+                <button class="button button--secondary toggle-card" type="button">Toggle Details</button>
+            </article>
+
+            <article class="course-card">
+                <div class="course-card__header">
+                    <h2>Lesson 08</h2>
+                    <span>CSS & Classes</span>
+                </div>
+                <p class="course-card__content">
+                    ฝึกใช้ .addClass(), .removeClass(), .toggleClass(), .hasClass() เพื่อควบคุม UI state
+                </p>
+                <button class="button button--secondary toggle-card" type="button">Toggle Details</button>
+            </article>
+        </section>
+
+        <section class="status-panel">
+            <h2>Interaction Status</h2>
+            <p id="statusText">ยังไม่มีการเลือก card</p>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
