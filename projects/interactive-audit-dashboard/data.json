@@ -1,0 +1,69 @@
+{
+  "findings": [
+    {
+      "id": "F-001",
+      "area": "Working Hours",
+      "requirement": "Daily rest and overtime control",
+      "risk": "High",
+      "status": "Open",
+      "owner": "HR Compliance",
+      "dueDate": "2026-09-30",
+      "details": "Overtime records require additional review before audit closure.",
+      "rootCause": "Working hour monitoring process is not consistently reviewed by the responsible owner.",
+      "correctiveAction": "Improve weekly overtime review, approval control, and escalation process.",
+      "evidence": "Attendance report, overtime approval, weekly review record, corrective action evidence"
+    },
+    {
+      "id": "F-002",
+      "area": "Wage Payment",
+      "requirement": "Wage payment evidence and employee acknowledgement",
+      "risk": "Medium",
+      "status": "In Progress",
+      "owner": "Payroll",
+      "dueDate": "2026-10-15",
+      "details": "Some wage payment evidence requires clearer traceability.",
+      "rootCause": "Payroll evidence retention is not aligned with audit retrieval needs.",
+      "correctiveAction": "Create a monthly payroll evidence checklist and assign document control owner.",
+      "evidence": "Payroll report, bank transfer record, acknowledgement evidence, checklist"
+    },
+    {
+      "id": "F-003",
+      "area": "Child Labour Control",
+      "requirement": "Age verification before employment",
+      "risk": "High",
+      "status": "Closed",
+      "owner": "Recruitment",
+      "dueDate": "2026-09-10",
+      "details": "Age verification control was reviewed and corrected.",
+      "rootCause": "Recruitment checklist did not explicitly separate age verification evidence.",
+      "correctiveAction": "Revise recruitment checklist and train recruitment staff.",
+      "evidence": "Updated checklist, ID copy control, training record, audit sample"
+    },
+    {
+      "id": "F-004",
+      "area": "Subcontractor Control",
+      "requirement": "Contractor labour compliance evidence",
+      "risk": "Medium",
+      "status": "Open",
+      "owner": "Procurement",
+      "dueDate": "2026-10-30",
+      "details": "Contractor evidence is incomplete for some service providers.",
+      "rootCause": "Supplier onboarding process does not require complete labour compliance evidence before approval.",
+      "correctiveAction": "Add labour compliance evidence requirement into supplier onboarding and annual review.",
+      "evidence": "Supplier checklist, contractor worker list, wage evidence, legal compliance declaration"
+    },
+    {
+      "id": "F-005",
+      "area": "Training and Awareness",
+      "requirement": "Employee awareness on labour standards",
+      "risk": "Low",
+      "status": "In Progress",
+      "owner": "Training",
+      "dueDate": "2026-11-05",
+      "details": "Training coverage requires update for new employees.",
+      "rootCause": "New employee training schedule is not fully linked to compliance training matrix.",
+      "correctiveAction": "Update training matrix and add monthly new employee compliance orientation.",
+      "evidence": "Training matrix, attendance record, training material, post-test result"
+    }
+  ]
+}
