@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AJAX JSON Dashboard | Modern jQuery 4 Course</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero">
+      <p class="eyebrow">Example 04</p>
+      <h1>AJAX JSON Dashboard</h1>
+      <p>
+        ตัวอย่างนี้สาธิตการโหลดข้อมูล JSON ด้วย jQuery AJAX และ render เป็น Dashboard แบบง่าย
+        เหมาะสำหรับต่อยอดเป็น HR / Audit / Compliance Dashboard
+      </p>
+    </section>
+
+    <section class="toolbar" aria-label="Dashboard controls">
+      <button id="loadButton" type="button">Load Dashboard Data</button>
+      <select id="severityFilter" aria-label="Filter by severity">
+        <option value="all">All Severities</option>
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+      </select>
+    </section>
+
+    <section id="statusMessage" class="status-message" aria-live="polite">
+      Ready to load data.
+    </section>
+
+    <section class="cards" aria-label="Summary cards">
+      <article class="card">
+        <span class="card-label">Total Findings</span>
+        <strong id="totalFindings">0</strong>
+      </article>
+      <article class="card">
+        <span class="card-label">High Risk</span>
+        <strong id="highRiskFindings">0</strong>
+      </article>
+      <article class="card">
+        <span class="card-label">Open Items</span>
+        <strong id="openFindings">0</strong>
+      </article>
+    </section>
+
+    <section class="table-card">
+      <h2>Audit Findings</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Finding</th>
+              <th>Severity</th>
+              <th>Status</th>
+              <th>Owner</th>
+            </tr>
+          </thead>
+          <tbody id="findingTableBody">
+            <tr>
+              <td colspan="5">No data loaded.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
